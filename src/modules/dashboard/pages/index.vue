@@ -210,9 +210,13 @@ function handleSubmit(data) {
       ...data,
     },
   };
-  api_update_home_page(dataPayload).finally(() => {
-    isSubmitting.value = false;
-  });
+  api_update_home_page(dataPayload)
+    .then((res) => {
+      payload.value = res.data.page.content;
+    })
+    .finally(() => {
+      isSubmitting.value = false;
+    });
 }
 </script>
 
