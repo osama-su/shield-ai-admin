@@ -71,19 +71,21 @@ function changeTab(str) {
 }
 
 const payload = ref({
-  hero: {
-    image: "",
-    title: "",
-    subtitle: "",
-    btn1: {
+  hero: [
+    {
+      image: "",
       title: "",
-      url: "",
+      subtitle: "",
+      btn1: {
+        title: "",
+        url: "",
+      },
+      btn2: {
+        title: "",
+        url: "",
+      },
     },
-    btn2: {
-      title: "",
-      url: "",
-    },
-  },
+  ],
   aboutUs: {
     title: "",
     subtitle: "",
